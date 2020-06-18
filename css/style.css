@@ -1,0 +1,32 @@
+body{
+    font-size: 15px;
+    font-family: sans-serif;
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(229,6%,66%);
+}
+
+h1{
+    text-align: center;
+    color: hsl(234, 12%, 34%);
+}
+
+h3{
+    color: hsl(234, 12%, 34%);
+}
+
+/* Relacionado con el DIV "container" */
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
+}
+
+/* Relacionado con el FOOTER */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
