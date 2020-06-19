@@ -1,6 +1,7 @@
 body{
     font-size: 15px;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     background-color: hsl(0, 0%, 98%);
     color: hsl(229,6%,66%);
 }
@@ -8,10 +9,16 @@ body{
 h1{
     text-align: center;
     color: hsl(234, 12%, 34%);
+    margin: 0;
+    font-size: 2.5em;
 }
 
 h3{
     color: hsl(234, 12%, 34%);
+}
+
+img{
+    align-self: flex-end;
 }
 
 /* Relacionado con el DIV "container" */
@@ -19,6 +26,62 @@ h3{
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto auto auto auto auto;
+    max-width: 1110px;
+    margin: 100px auto;
+}
+
+.Title1{
+    grid-column: 1 / span 3;
+    grid-row: 1 / 2;
+    font-weight: 200;
+}
+
+.Title2{
+    grid-column: 1 / span 3;
+    grid-row: 2 / 3;
+}
+
+.MainText{
+    grid-column: 1 / span 3;
+    grid-row: 3 / 4;
+    text-align: center;
+    margin: 3% 25%;
+}
+
+.Box{
+    background-color: #ffffff;
+    width: 80%;
+    padding: 7%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 25px auto;
+    border-radius: 10px;
+    border-top: 6px solid #000000;
+    box-shadow: 0px 10px 10px hsla(229,6%,66%,25%)
+}
+
+.Supervisor{
+    grid-column: 1 / 2;
+    grid-row: 5 / 7;
+    border-color: hsl(180, 62%, 55%) ;
+}
+
+.Team{
+    grid-column: 2 / 3;
+    grid-row: 4 / 6;
+    border-color: hsl(0, 78%, 62%) ;
+}
+
+.Karma{
+    grid-column: 2 / 3;
+    grid-row: 6 / 8;
+    border-color: hsl(34, 97%, 64%) ;
+}
+
+.Calculator{
+    grid-column: 3 / 4;
+    grid-row: 5 / 7;
+    border-color: hsl(212, 86%, 64%) ;
 }
 
 /* Relacionado con el FOOTER */
@@ -29,4 +92,95 @@ h3{
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+/* Responsivo Ancho 922px */
+@media (max-width: 922px)
+{
+    .container{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto auto auto;
+    }
+
+    .Title1{
+        grid-column: 1 / span 2;
+        grid-row: 1 / 2;
+    }
+
+    .Title2{
+        grid-column: 1 / span 2;
+        grid-row: 2 / 3;
+    }
+
+    .MainText{
+        grid-column: 1 / span 2;
+        grid-row: 3 / 4;
+    }
+
+    .Supervisor{
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+
+    .Team{
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+
+    .Karma{
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+
+    .Calculator{
+        grid-column: 2 / 3;
+        grid-row: 5 / 6;
+    }
+}
+
+/* Responsivo Ancho 500px */
+@media (max-width: 500px)
+{
+    .container{
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto auto auto;
+    }
+
+    .Title1{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        font-size: 1.5em;
+    }
+
+    .Title2{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        font-size: 1.5em;
+    }
+
+    .MainText{
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        margin: 9%;
+    }
+
+    .Supervisor{
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+
+    .Team{
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+
+    .Karma{
+        grid-column: 1 / 2;
+        grid-row: 6 / 7;
+    }
+
+    .Calculator{
+        grid-column: 1 / 2;
+        grid-row: 7 / 8;
+    }
 }
